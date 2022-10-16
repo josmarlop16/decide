@@ -11,36 +11,6 @@
 {% endblock %}
 
 {% block content %}
-
-    <h1>Please vote{{ voting.id }} - {{ voting. name }}</h1>
-        <div id="login">
-            <label for="username"> {% trans "Username" %} </label>
-            <input type="text" id="username" name="username" value="username">
-            <br/>
-
-            <label for="password"> {% trans "Password" %} </label>
-            <input type="password" id="password" name="username" value="password">
-            <br/>
-
-            {% comment %} <input type="submit" name="boton" value="{% trans "Login" %) onClick="login()" > {% endcomment %}
-        </div>
-
-        <div id="voting">
-            <a href="#" onClick="decideLogout()"> {% trans "logout" %}
-            <h2>{{ voting.question.desc }}</h2>
-            
-            {% for opt in voting.question.options %}
-                <label for="q{{opt.number}}">
-                    <input id="q{{opt.number}}" type="radio" name="options">
-                </label>
-            {% endfor %}
-        
-            <input type="submit" value="{% trans "Vote" %}" onClick="submit()">
-        </div>
-
-{% endblock %}
-
-{% block content %}
     <div id="app-booth">
         <!-- Navbar -->
         <b-navbar type="dark" variant="secondary">

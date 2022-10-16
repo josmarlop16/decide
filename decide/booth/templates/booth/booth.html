@@ -2,12 +2,9 @@
 {% load i18n static %}
 
 {% block extrahead %}
-    <link type="text/css" rel="stylesheet"
-         href="https://unpkg.com/bootstrap/dist/css/bootstrap.min.css" />
-    <link type="text/css" rel="stylesheet"
-         href="https://cdn.jsdelivr.net/npm/vue@2.7.13" />
-    <link type="text/css" rel="stylesheet" 
-        href="{% static "booth/style.css" %}" />
+    <link type="text/css" rel="stylesheet" href="https://unpkg.com/bootstrap/dist/css/bootstrap.min.css" />
+    <link type="text/css" rel="stylesheet" href="https://cdn.jsdelivr.net/npm/vue@2.7.13" />
+    <link type="text/css" rel="stylesheet" href="{% static "booth/style.css" %}" />
 {% endblock %}
 
 {% block content %}
@@ -27,7 +24,7 @@
         </b-alert>
 
         <div class="voting">
-            <h1>[[ voting.id ]] - [[ voting.name ]]</h1>
+            <h1>Please vote [[ voting.id ]] - [[ voting.name ]]</h1>
 
             <!-- Register -->
             <b-form @submit="onSubmitLogin" v-if="signup">
@@ -82,9 +79,9 @@
     <script src="{% static "crypto/elgamal.js" %}"></script>
 
     <!-- Vuejs -->
-    <script src="https://unpkg.com/vue"></script>
+   <!-- <script src="https://cdn.jsdelivr.net/npm/vue@2.7.13"></script> -->
     <script src="https://unpkg.com/babel-polyfill@latest/dist/polyfill.min.js"></script>
-    <script src="https://unpkg.com/bootstrap-vue@latest/dist/bootstrap-vue.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.7.13"></script>
 
     <script>
         var voting = {{voting|safe}};
